@@ -44,7 +44,7 @@ export default function Header() {
         </div>
 
         {!isSearchActive && (
-          <a href="./alibrosLogin.html" className="bg-green-500 p-2 sm:font-semibold rounded-md text-blue-800 flex items-center gap-1">
+          <a href="#" className="bg-green-500 p-2 sm:font-semibold rounded-md text-blue-800 flex items-center gap-1">
             <i className="ri-logout-box-r-line"></i> Logout
           </a>
         )}

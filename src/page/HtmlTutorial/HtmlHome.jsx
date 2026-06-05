@@ -81,9 +81,9 @@ const HtmlHome = () => {
           </div>
           <div>
             <i className="ri-bookmark-line ml-16 text-green-500 cursor-pointer hover:text-green-400 text-3xl"></i>
-            <button className="flex items-center mt-16 bg-green-600 hover:bg-green-500 py-1 px-2 rounded-md font-semibold text-white justify-center">
+            <a href='/HtmlIntroduction' className="flex items-center mt-16 bg-green-600 hover:bg-green-500 py-1 px-2 rounded-md font-semibold text-white justify-center">
               Next<i className="ri-arrow-drop-right-line text-3xl"></i>
-            </button>
+            </a>
           </div>
         </div>
 
