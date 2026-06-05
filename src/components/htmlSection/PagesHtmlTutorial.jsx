@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const HtmlTutorial = () => {
   // Active link state track karne ke liye
@@ -8,30 +9,30 @@ const HtmlTutorial = () => {
 
   // Sidebar ke saare links ki list
   const sidebarLinks = [
-    { name: 'HTML HOME', href: 'my-app/src/components/section1' },
-    { name: 'HTML Introduction', href: './htmlIntroduction.html' },
-    { name: 'HTML Editors', href: '#' },
-    { name: 'HTML Basic', href: '#' },
-    { name: 'HTML Element', href: '#' },
-    { name: 'HTML Attributes', href: '#' },
-    { name: 'HTML Heading', href: '#' },
-    { name: 'HTML Paragraphs', href: '#' },
-    { name: 'HTML Styles', href: '#' },
-    { name: 'HTML Formatting', href: '#' },
-    { name: 'HTML Quotation', href: '#' },
-    { name: 'HTML comments', href: '#' },
-    { name: 'HTML Colors', href: '#' },
-    { name: 'HTML CSS', href: '#' },
-    { name: 'HTML Links', href: '#' },
-    { name: 'HTML images', href: '#' },
-    { name: 'HTML Favicon', href: '#' },
-    { name: 'HTML Page Title', href: '#' },
-    { name: 'HTML Tables', href: '#' },
-    { name: 'HTML Lists', href: '#' },
-    { name: 'HTML Block & Inline', href: '#' },
-    { name: 'HTML Div', href: '#' },
-    { name: 'HTML Classes', href: '#' },
-    { name: 'HTML Id', href: '#' },
+    { name: 'HTML HOME', path: '/html-tutorial' },
+    { name: 'HTML Introduction', path: './htmlIntroduction.html' },
+    { name: 'HTML Editors', path: '#' },
+    { name: 'HTML Basic', path: '#' },
+    { name: 'HTML Element', path: '#' },
+    { name: 'HTML Attributes', path: '#' },
+    { name: 'HTML Heading', path: '#' },
+    { name: 'HTML Paragraphs', path: '#' },
+    { name: 'HTML Styles', path: '#' },
+    { name: 'HTML Formatting', path: '#' },
+    { name: 'HTML Quotation', path: '#' },
+    { name: 'HTML comments', path: '#' },
+    { name: 'HTML Colors', path: '#' },
+    { name: 'HTML CSS', path: '#' },
+    { name: 'HTML Links', path: '#' },
+    { name: 'HTML images', path: '#' },
+    { name: 'HTML Favicon', path: '#' },
+    { name: 'HTML Page Title', path: '#' },
+    { name: 'HTML Tables', path: '#' },
+    { name: 'HTML Lists', path: '#' },
+    { name: 'HTML Block & Inline', path: '#' },
+    { name: 'HTML Div', path: '#' },
+    { name: 'HTML Classes', path: '#' },
+    { name: 'HTML Id', path: '#' },
     { name: 'HTML Buttons', href: '#' },
     { name: 'HTML Iframes', href: '#' },
     { name: 'HTML JavaScript', href: '#' },
@@ -45,12 +46,12 @@ const HtmlTutorial = () => {
     { name: 'HTML Entities', href: '#' },
     { name: 'HTML Symbols', href: '#' },
     { name: 'HTML Charsets', href: '#' },
-    { name: 'HTML URL Encode', href: '#' },
-    { name: 'HTML vs. XHTML', href: '#' },
+    { name: 'HTML URL Encode', path: '#' },
+    { name: 'HTML vs. XHTML', path: '#' },
   ];
 
   return (
-    <section className="flex bg-white mt-[44px] w-full">
+    <section className="flex bg-white mt-[90px] w-full">
       {/* Sidebar Section */}
       <div className={`sidebar fixed bg-[#eae9e9] flex flex-col gap-2 py-4 h-[540px] sm:w-[17%] overflow-y-auto ${isSidebarOpen ? '' : 'hidden'}`}>
         <h1 className="font-semibold text-lg pl-4">HTML Tutorial</h1>
@@ -70,12 +71,12 @@ const HtmlTutorial = () => {
       </div>
 
       {/* Main Content Section */}
-      <section className="sm:ml-[18%] sm:px-8 py-10 sm:w-full w-full pl-4">
+      <section className="sm:ml-[18%]  sm:px-8 py-10 sm:w-full w-full pl-4">
         {/* Top Header Controls */}
         <div className="bg-white py-10 flex justify-between px-3 sm:px-10 items-end border-b pb-12 border-[#d8d8d8]">
-          <div className="p-2">
+          <div className="p-2 ">
             <h1 className="font-medium pb-4 text-2xl sm:text-4xl">HTML Tutorial</h1>
-            <a href="/src/components/section1" className="flex items-center bg-green-600 hover:bg-green-500 w-[100px] py-1 rounded-md font-semibold text-white justify-center">
+            <a href="/" className="flex items-center bg-green-600 hover:bg-green-500 w-[100px] py-1 rounded-md font-semibold text-white justify-center">
               <i className="ri-arrow-drop-left-line text-3xl"></i>Home
             </a>
           </div>
