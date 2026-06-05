@@ -25,7 +25,7 @@ export default function Nav() {
           <Link
             key={tech}
             className="hover:bg-black p-2 flex-shrink-0"
-            to={tech === 'HTML' ? "/html-tutorial" : "/"}
+            to={tech === 'HTML' ? "/htmlHome" : "/"}
           >
             {tech}
           </Link>

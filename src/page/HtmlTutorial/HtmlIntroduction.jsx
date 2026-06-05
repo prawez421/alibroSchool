@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { href, Link } from 'react-router-dom';
 
-const HtmlTutorial = () => {
+const HtmlIntroduction = () => {
   // Active link state track karne ke liye
   const [activeLink, setActiveLink] = useState('HTML HOME');
   // Agar aapko mobile view ke liye toggle banana ho
@@ -9,12 +9,12 @@ const HtmlTutorial = () => {
 
   // Sidebar ke saare links ki list
   const sidebarLinks = [
-    { name: 'HTML HOME', path: '/html-tutorial' },
-    { name: 'HTML Introduction', path: './htmlIntroduction.html' },
-    { name: 'HTML Editors', path: '#' },
-    { name: 'HTML Basic', path: '#' },
-    { name: 'HTML Element', path: '#' },
-    { name: 'HTML Attributes', path: '#' },
+    { name: 'HTML HOME', href: '/htmlHome' },
+    { name: 'HTML Introduction', href: '/HtmlIntroduction' },
+    { name: 'HTML Editors', href: '#' },
+    { name: 'HTML Basic', href: '#' },
+    { name: 'HTML Element', href: '#' },
+    { name: 'HTML Attributes', href: '#' },
     { name: 'HTML Heading', path: '#' },
     { name: 'HTML Paragraphs', path: '#' },
     { name: 'HTML Styles', path: '#' },
@@ -51,19 +51,18 @@ const HtmlTutorial = () => {
   ];
 
   return (
-    <section className="flex bg-white mt-[90px] w-full">
+    <section className="flex bg-white  mt-[90px] w-full">
       {/* Sidebar Section */}
-      <div className={`sidebar fixed bg-[#eae9e9] flex flex-col gap-2 py-4 h-[540px] sm:w-[17%] overflow-y-auto ${isSidebarOpen ? '' : 'hidden'}`}>
-        <h1 className="font-semibold text-lg pl-4">HTML Tutorial</h1>
-        
+      <div className={`sidebar scrollbar-thin sticky top-[90px] bg-[#eae9e9] flex flex-col gap-2 py-4 h-[calc(100vh-90px)] sm:w-[25%]  overflow-y-auto z-20 ${isSidebarOpen ? '' : 'hidden'}`} >
+        <h1 className="font-semibold text-lg pl-4">HTML Tutorial </h1>
+
         {sidebarLinks.map((link, index) => (
           <a
             key={index}
             href={link.href}
             onClick={() => setActiveLink(link.name)}
-            className={`font-medium text-sm hover:bg-green-500 hover:text-white w-full p-[2px] pl-4 transition-colors ${
-              activeLink === link.name ? 'bg-green-500 text-white' : 'text-black'
-            }`}
+            className={`font-medium text-sm hover:bg-green-500 hover:text-white w-full p-[2px] pl-4 transition-colors ${activeLink === link.name ? 'bg-green-500 text-white' : 'text-black'
+              }`}
           >
             {link.name}
           </a>
@@ -71,11 +70,11 @@ const HtmlTutorial = () => {
       </div>
 
       {/* Main Content Section */}
-      <section className="sm:ml-[18%]  sm:px-8 py-10 sm:w-full w-full pl-4">
+      <section className="sm:px-8 py-10 sm:w-full w-full pl-4">
         {/* Top Header Controls */}
         <div className="bg-white py-10 flex justify-between px-3 sm:px-10 items-end border-b pb-12 border-[#d8d8d8]">
           <div className="p-2 ">
-            <h1 className="font-medium pb-4 text-2xl sm:text-4xl">HTML Tutorial</h1>
+            <h1 className="font-medium pb-4 text-2xl sm:text-4xl">HTML Introduction</h1>
             <a href="/" className="flex items-center bg-green-600 hover:bg-green-500 w-[100px] py-1 rounded-md font-semibold text-white justify-center">
               <i className="ri-arrow-drop-left-line text-3xl"></i>Home
             </a>
@@ -89,18 +88,10 @@ const HtmlTutorial = () => {
         </div>
 
         {/* Learn HTML Content */}
-        <div className="p-8 rounded-md">
-          <h1 className="text-3xl font-semibold mb-4">Learn HTML</h1>
-          <p className="mb-3 text-lg">HTML is the standard markup language for creating Web pages.</p>
-          <p className="mb-3 text-lg">HTML stands for Hyper Text Markup Language.</p>
-          <p className="mb-3 text-lg">HTML describes the structure of a Web page.</p>
-          <p className="mb-3 text-lg">HTML consists of a series of elements.</p>
-          <p className="mb-6 text-lg">HTML elements tell the browser how to display the content.</p>
-          
-          <button className="bg-green-600 hover:bg-green-500 text-white font-semibold px-4 py-2 rounded-md">
-            Start learning HTML now »
-          </button>
-        </div>
+      
+
+
+
 
         {/* Code Example Section */}
         <div className="bg-[#ededee] h-auto flex flex-col gap-3 p-4 rounded-md shadow-lg max-w-4xl">
@@ -119,10 +110,10 @@ const HtmlTutorial = () => {
               {"</"}<span className="text-[#990070]">html</span>
             </pre>
           </div>
-          <a 
-            href="https://onecompiler.com/html/44kbj9r7g" 
-            target="_blank" 
-            rel="noopener noreferrer" 
+          <a
+            href="https://onecompiler.com/html/44kbj9r7g"
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-green-500 hover:bg-green-400 w-[160px] text-white p-2 text-center rounded-3xl font-semibold text-lg mt-2 block"
           >
             Try it Yourself
@@ -140,4 +131,4 @@ const HtmlTutorial = () => {
   );
 };
 
-export default HtmlTutorial;
+export default HtmlIntroduction;

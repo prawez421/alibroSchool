@@ -2,11 +2,12 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Hero from './components/section1/Hero';
+import Hero from './page/home/Hero';
 import Nav from './components/Nav'
-import LangSection from './components/section1/LangSection';
-import CardsGrid from './components/section1/CardsGrid';
-import HtmlTutorial from './components/htmlSection/PagesHtmlTutorial';
+import LangSection from './page/home/LangSection';
+import CardsGrid from './page/home/CardsGrid';
+import HtmlHome from './page/HtmlTutorial/HtmlHome';
+import HtmlIntroduction from './page/HtmlTutorial/HtmlIntroduction'
 
 
 const Home = ({ htmlCode, cssCode, jsCode }) => (
@@ -33,7 +34,8 @@ function App() {
       <main className="flex-grow">
         <Routes>
           <Route path="/" element={<Home htmlCode={htmlCode} cssCode={cssCode} jsCode={jsCode} />} />
-          <Route path="/html-tutorial" element={<HtmlTutorial />} />
+          <Route path="/htmlHome" element={<HtmlHome />} />
+          <Route path="/HtmlIntroduction" element={<HtmlIntroduction />}></Route>
          
         </Routes>
       
