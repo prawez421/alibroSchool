@@ -10,6 +10,9 @@ import HtmlHome from './page/HtmlTutorial/HtmlHome';
 import HtmlIntroduction from './page/HtmlTutorial/HtmlIntroduction'
 
 
+
+
+
 const Home = ({ htmlCode, cssCode, jsCode }) => (
   <>
     <Hero />
@@ -34,8 +37,8 @@ function App() {
       <main className="flex-grow">
         <Routes>
           <Route path="/" element={<Home htmlCode={htmlCode} cssCode={cssCode} jsCode={jsCode} />} />
-          <Route path="/htmlHome" element={<HtmlHome />} />
-          <Route path="/HtmlIntroduction" element={<HtmlIntroduction />}></Route>
+          <Route path="/htmlHome" element={<HtmlHome />}> </Route>
+          <Route path="/htmlIntroduction" element={<HtmlIntroduction />}></Route>
          
         </Routes>
       

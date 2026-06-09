@@ -1,72 +1,14 @@
-import React, { useState } from 'react';
-import { href, Link } from 'react-router-dom';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import Sidebar from'../../data/Sidebar';
 
-const HtmlHome = () => {
-  // Active link state track karne ke liye
-  const [activeLink, setActiveLink] = useState('HTML HOME');
-  // Agar aapko mobile view ke liye toggle banana ho
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
-
-  // Sidebar ke saare links ki list
-  const sidebarLinks = [
-    { name: 'HTML HOME', href: '/htmlHome' },
-    { name: 'HTML Introduction', href: '/HtmlIntroduction'},
-    { name: 'HTML Editors', href: '#' },
-    { name: 'HTML Basic', href: '#' },
-    { name: 'HTML Element', href: '#' },
-    { name: 'HTML Attributes', path: '#' },
-    { name: 'HTML Heading', path: '#' },
-    { name: 'HTML Paragraphs', path: '#' },
-    { name: 'HTML Styles', path: '#' },
-    { name: 'HTML Formatting', path: '#' },
-    { name: 'HTML Quotation', path: '#' },
-    { name: 'HTML comments', path: '#' },
-    { name: 'HTML Colors', path: '#' },
-    { name: 'HTML CSS', path: '#' },
-    { name: 'HTML Links', path: '#' },
-    { name: 'HTML images', path: '#' },
-    { name: 'HTML Favicon', path: '#' },
-    { name: 'HTML Page Title', path: '#' },
-    { name: 'HTML Tables', path: '#' },
-    { name: 'HTML Lists', path: '#' },
-    { name: 'HTML Block & Inline', path: '#' },
-    { name: 'HTML Div', path: '#' },
-    { name: 'HTML Classes', path: '#' },
-    { name: 'HTML Id', path: '#' },
-    { name: 'HTML Buttons', href: '#' },
-    { name: 'HTML Iframes', href: '#' },
-    { name: 'HTML JavaScript', href: '#' },
-    { name: 'HTML File Paths', href: '#' },
-    { name: 'HTML Head', href: '#' },
-    { name: 'HTML Layout', href: '#' },
-    { name: 'HTML Responsive', href: '#' },
-    { name: 'HTML Computerxode', href: '#' },
-    { name: 'HTML Semantics', href: '#' },
-    { name: 'HTML Style Guide', href: '#' },
-    { name: 'HTML Entities', href: '#' },
-    { name: 'HTML Symbols', href: '#' },
-    { name: 'HTML Charsets', href: '#' },
-    { name: 'HTML URL Encode', path: '#' },
-    { name: 'HTML vs. XHTML', path: '#' },
-  ];
+function HtmlHome() {
 
   return (
     <section className="flex bg-white  mt-[90px] w-full">
       {/* Sidebar Section */}
-      <div className={`sidebar scrollbar-thin cursor-pointer sticky top-[90px] bg-[#eae9e9] flex flex-col gap-2 py-4 h-[calc(100vh-90px)] sm:w-[25%]  overflow-y-auto z-20 ${isSidebarOpen ? '' : 'hidden'}`} >
-        <h1 className="font-semibold text-lg pl-4">HTML Tutorial</h1>
-
-        {sidebarLinks.map((link, index) => (
-          <a
-            key={index}
-            href={link.href}
-            onClick={() => setActiveLink(link.name)}
-            className={`font-medium text-sm hover:bg-green-500 hover:text-white w-full p-[2px] pl-4 transition-colors ${activeLink === link.name ? 'bg-green-500 text-white' : 'text-black'
-              }`}
-          >
-            {link.name}
-          </a>
-        ))}
+      <div className={`sidebar scrollbar-thin cursor-pointer sticky top-[90px] bg-[#eae9e9] flex flex-col gap-2 py-4 h-[calc(100vh-90px)] sm:w-[25%]  overflow-y-auto z-20 }`}>
+        <Sidebar />
       </div>
 
       {/* Main Content Section */}
@@ -137,6 +79,6 @@ const HtmlHome = () => {
       </section>
     </section>
   );
-};
+}
 
 export default HtmlHome;
